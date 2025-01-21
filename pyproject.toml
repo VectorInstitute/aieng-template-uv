@@ -3,9 +3,9 @@ name = "aieng-template-uv"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-authors = [
-    { email = "andrei@nerdai.io" }
-]
+authors = [ {name = "Vector AI Engineering", email = "ai_engineering@vectorinstitute.ai"}]
+license = "Apache-2.0"
+repository = "https://github.com/VectorInstitute/aieng-template-uv"
 requires-python = ">=3.12"
 dependencies = []
 
