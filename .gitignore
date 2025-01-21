@@ -8,3 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Lint & Test
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
