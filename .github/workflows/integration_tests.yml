@@ -59,13 +59,9 @@ jobs:
           uv run pytest --cov fed_rag --cov-report=xml tests
 
       - name: Upload coverage to Codecov
-        uses: Wandalen/wretry.action@v3.5.0
+        uses: codecov/codecov-action@v5
         with:
-          action: codecov/codecov-action@v5
-          with: |
-            token: ${{ secrets.CODECOV_TOKEN }}
-            slug: VectorInstitute/aieng-template-uv
-            fail_ci_if_error: true
-            verbose: true
-          attempt_limit: 5
-          attempt_delay: 30000
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: VectorInstitute/aieng-template-uv
+          fail_ci_if_error: true
+          verbose: true
