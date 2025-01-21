@@ -17,7 +17,7 @@ on:
       - '**.md'
 
 jobs:
-  build_and_deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.0
@@ -39,9 +39,3 @@ jobs:
 
       - name: Build docs
         run: cd docs && rm -rf source/reference/api/_autosummary && uv run make html
-
-      - name: Deploy to Github pages
-        uses: JamesIves/github-pages-deploy-action@v4.6.8
-        with:
-          branch: github_pages
-          folder: docs/build/html
