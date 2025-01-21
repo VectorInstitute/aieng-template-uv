@@ -1,0 +1,50 @@
+name: docs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .pre-commit-config.yaml
+      - .github/workflows/code_checks.yml
+      - .github/workflows/docs_build.yml
+      - .github/workflows/docs_deploy.yml
+      - .github/workflows/integration_tests.yml
+      - '**.py'
+      - '**.ipynb'
+      - '**.html'
+      - '**.js'
+      - poetry.lock
+      - pyproject.toml
+      - '**.rst'
+      - '**.md'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          # Install a specific version of uv.
+          version: "0.5.21"
+          enable-cache: true
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+
+      - name: Install the project
+        run: uv sync --all-extras --all-groups
+
+      - name: Build docs
+        run: cd docs && rm -rf source/reference/api/_autosummary && uv run make html
+
+      - name: Deploy to Github pages
+        uses: JamesIves/github-pages-deploy-action@v4.6.8
+        with:
+          branch: github_pages
+          folder: docs/build/html
