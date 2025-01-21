@@ -1,0 +1,67 @@
+name: integration tests
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .pre-commit-config.yaml
+      - .github/workflows/code_checks.yml
+      - .github/workflows/docs_build.yml
+      - .github/workflows/docs_deploy.yml
+      - .github/workflows/integration_tests.yml
+      - '**.py'
+      - '**.ipynb'
+      - uv.lock
+      - pyproject.toml
+      - '**.rst'
+      - '**.md'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .pre-commit-config.yaml
+      - .github/workflows/code_checks.yml
+      - .github/workflows/docs_build.yml
+      - .github/workflows/docs_deploy.yml
+      - .github/workflows/integration_tests.yml
+      - '**.py'
+      - '**.ipynb'
+      - uv.lock
+      - pyproject.toml
+      - '**.rst'
+      - '**.md'
+
+jobs:
+  integration-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          # Install a specific version of uv.
+          version: "0.5.21"
+          enable-cache: true
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+
+      - name: Install the project
+        run: uv sync --all-extras --dev
+
+      - name: Install dependencies and check code
+        run: |
+          uv run pytest -m "integration_test" --cov fed_rag --cov-report=xml tests
+
+      ## Uncomment this once this repo is configured on Codecov
+      # - name: Upload coverage to Codecov
+      #   uses: codecov/codecov-action@v5
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }}
+      #     slug: VectorInstitute/aieng-template-uv
+      #     fail_ci_if_error: true
+      #     verbose: true
