@@ -1,4 +1,4 @@
-name: integration tests
+name: unit tests
 
 on:
   push:
@@ -33,7 +33,7 @@ on:
       - '**.md'
 
 jobs:
-  integration-tests:
+  unit-tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.0
@@ -55,7 +55,7 @@ jobs:
 
       - name: Install dependencies and check code
         run: |
-          uv run pytest -m "integration_test" --cov fed_rag --cov-report=xml tests
+          uv run pytest -m "not integration_test" --cov fed_rag --cov-report=xml tests
 
       ## Uncomment this once this repo is configured on Codecov
       # - name: Upload coverage to Codecov
