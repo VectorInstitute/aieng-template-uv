@@ -2,7 +2,7 @@
 hide-toc: true
 ---
 
-# Vector AI Engineering template repository
+# Vector AI Engineering template (uv edition) repository
 
 ```{toctree}
 :hidden:
