@@ -57,11 +57,11 @@ jobs:
         run: |
           uv run pytest -m "not integration_test" --cov fed_rag --cov-report=xml tests
 
-      ## Uncomment this once this repo is configured on Codecov
-      # - name: Upload coverage to Codecov
-      #   uses: codecov/codecov-action@v5
-      #   with:
-      #     token: ${{ secrets.CODECOV_TOKEN }}
-      #     slug: VectorInstitute/aieng-template-uv
-      #     fail_ci_if_error: true
-      #     verbose: true
+      # Uncomment this once this repo is configured on Codecov
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: VectorInstitute/aieng-template-uv
+          fail_ci_if_error: true
+          verbose: true
