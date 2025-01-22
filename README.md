@@ -9,8 +9,8 @@
 ![GitHub License](https://img.shields.io/github/license/VectorInstitute/aieng-template-uv)
 
 A template repo for AI Engineering projects (using ``python``) and ``uv``. This
-template is like our original AI Engineering [template](https://github.com/VectorInstitute/aieng-template-uv),
-but unlike in that template which uses poetry, here we use uv for dependency
+template is like our original AI Engineering [template](https://github.com/VectorInstitute/aieng-template),
+however, unlike how that template uses poetry, this one uses uv for dependency
 management (as well as packaging and publishing).
 
 ## 🧑🏿‍💻 Developing
