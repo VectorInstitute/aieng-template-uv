@@ -46,7 +46,7 @@ common `poetry` commands.
 
 | Poetry                                               | UV                                          |
 |------------------------------------------------------|---------------------------------------------|
-| `poetry init <project-name>`  # creates new project  | `uv init <project-name>`                    |
+| `poetry new <project-name>`  # creates new project   | `uv init <project-name>`                    |
 | `poetry install`  # installs existing project        | `uv sync`                                   |
 | `poetry install --with docs,test`                    | `uv sync --group docs --group test`         |
 | `poetry add numpy`                                   | `uv add numpy`                              |
@@ -56,6 +56,7 @@ common `poetry` commands.
 | `poetry run <cmd>`  # runs cmd with the project venv | `uv run <cmd>`                              |
 | `poetry build`                                       | `uv build`                                  |
 | `poetry publish`                                     | `uv publish`                                |
+| `poetry cache clear pypi --all`                      | `uv cache clean`                            |
 
 For the full list of `uv` commands, you can visit the official [docs](https://docs.astral.sh/uv/reference/cli/#uv).
 
@@ -63,3 +64,27 @@ For the full list of `uv` commands, you can visit the official [docs](https://do
 
 If you're curious about what "uv" stands for, it appears to have been more or
 less chosen [randomly](https://github.com/astral-sh/uv/issues/1349#issuecomment-1986451785).
+
+### Test
+
+```sh
+# clear caches
+poetry cache clear pypi --all
+uv cache clean
+```
+
+```sh
+poetry new sm-bench-poetry
+cd sm-bench-poetry
+poetry add \
+numpy@^1.21.0 pandas opacus torch dp-accounting torchmetrics aiohttp \
+ecos urllib3 grpcio wandb scikit-learn transformers
+```
+
+```sh
+uv init sm-bench-uv
+cd sm-bench-uv
+uv add \
+"numpy>=1.21.0" pandas opacus torch dp-accounting torchmetrics aiohttp \
+ecos urllib3 grpcio wandb scikit-learn transformers
+```
