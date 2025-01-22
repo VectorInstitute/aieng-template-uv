@@ -44,16 +44,18 @@ The other important note is that while `poetry` uses a "flat" layout of the proj
 The table below provides the `uv` equivalent counterparts for some of the more
 common `poetry` commands.
 
-| Poetry                                        | UV                                        |
-|-----------------------------------------------|-------------------------------------------|
-| poetry install                                | uv sync                                   |
-| poetry install --with docs,test               | uv sync --group docs --group test         |
-| poetry add numpy                              | uv add numpy                              |
-| poetry add pytest pytest-asyncio --groups dev | uv add pytest pytest-asyncio --groups dev |
-| poetry remove numpy                           | uv remove numpy                           |
-| poetry lock                                   | uv lock                                   |
-| poetry build                                  | uv build                                  |
-| poetry publish                                | uv publish                                |
+| Poetry                                             | UV                                        |
+|----------------------------------------------------|-------------------------------------------|
+| poetry init <project-name>  # creates new project  | uv init <project-name>                    |
+| poetry install  # installs existing project        | uv sync                                   |
+| poetry install --with docs,test                    | uv sync --group docs --group test         |
+| poetry add numpy                                   | uv add numpy                              |
+| poetry add pytest pytest-asyncio --groups dev      | uv add pytest pytest-asyncio --groups dev |
+| poetry remove numpy                                | uv remove numpy                           |
+| poetry lock                                        | uv lock                                   |
+| poetry run <cmd>  # runs cmd with the project venv | uv run <cmd>                              |
+| poetry build                                       | uv build                                  |
+| poetry publish                                     | uv publish                                |
 
 For the full list of `uv` commands, you can visit the official [docs](https://docs.astral.sh/uv/reference/cli/#uv).
 
