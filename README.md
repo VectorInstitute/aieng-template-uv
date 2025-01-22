@@ -1,4 +1,4 @@
-# AI Engineering template (uv edition)
+# AI Engineering template (with uv)
 
 ----------------------------------------------------------------------------------------
 
