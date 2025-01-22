@@ -64,27 +64,3 @@ For the full list of `uv` commands, you can visit the official [docs](https://do
 
 If you're curious about what "uv" stands for, it appears to have been more or
 less chosen [randomly](https://github.com/astral-sh/uv/issues/1349#issuecomment-1986451785).
-
-### Test
-
-```sh
-# clear caches
-poetry cache clear pypi --all
-uv cache clean
-```
-
-```sh
-poetry new sm-bench-poetry
-cd sm-bench-poetry
-poetry add \
-numpy@^1.21.0 pandas opacus torch dp-accounting torchmetrics aiohttp \
-ecos urllib3 grpcio wandb scikit-learn transformers
-```
-
-```sh
-uv init sm-bench-uv
-cd sm-bench-uv
-uv add \
-"numpy>=1.21.0" pandas opacus torch dp-accounting torchmetrics aiohttp \
-ecos urllib3 grpcio wandb scikit-learn transformers
-```
