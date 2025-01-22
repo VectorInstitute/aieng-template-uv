@@ -2,8 +2,14 @@
 
 ----------------------------------------------------------------------------------------
 
+[![code checks](https://github.com/VectorInstitute/aieng-template-uv/actions/workflows/code_checks.yml/badge.svg)](https://github.com/VectorInstitute/aieng-template-uv/actions/workflows/code_checks.yml)
+[![integration tests](https://github.com/VectorInstitute/aieng-template-uv/actions/workflows/integration_tests.yml/badge.svg)](https://github.com/VectorInstitute/aieng-template-uv/actions/workflows/integration_tests.yml)
+[![docs](https://github.com/VectorInstitute/aieng-template-uv/actions/workflows/docs_deploy.yml/badge.svg)](https://github.com/VectorInstitute/aieng-template-uv/actions/workflows/docs_deploy.yml)
+[![codecov](https://codecov.io/github/VectorInstitute/aieng-template-uv/graph/badge.svg?token=83MYFZ3UPA)](https://codecov.io/github/VectorInstitute/aieng-template-uv)
+![GitHub License](https://img.shields.io/github/license/VectorInstitute/aieng-template-uv)
+
 A template repo for AI Engineering projects (using ``python``) and ``uv``. This
-template is like our original AI Engineering [template](https://github.com/VectorInstitute/aieng-template),
+template is like our original AI Engineering [template](https://github.com/VectorInstitute/aieng-template-uv),
 but unlike in that template which uses poetry, here we use uv for dependency
 management (as well as packaging and publishing).
 
