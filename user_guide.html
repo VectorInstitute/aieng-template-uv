@@ -273,16 +273,21 @@
 <h2>pyproject.toml file and dependency management<a class="headerlink" href="#pyproject-toml-file-and-dependency-management" title="Link to this heading">¶</a></h2>
 <p>If your project doesn’t have a pyproject.toml file, simply copy the one from the
 template and update file according to your project.</p>
-<p>For managing dependencies, <a class="reference external" href="https://python-poetry.org/">Poetry</a> is the recommended tool
-for our team. Hence, install Poetry to setup the development virtual environment. Poetry
-supports <a class="reference external" href="https://python-poetry.org/docs/managing-dependencies/#optional-groups">optional dependency groups</a>
-which help manage dependencies for different parts of development such as <code class="docutils literal notranslate"><span class="pre">documentation</span></code>,
+<p>For managing dependencies, this template makes use of <a class="reference external" href="https://docs.astral.sh/uv/">uv</a>,
+which according to some <a class="reference external" href="https://github.com/astral-sh/uv/blob/main/BENCHMARKS.md">benchmarks</a>
+is faster than alternative like Poetry (which our original AI Engineering Template
+makes use of).</p>
+<p>Hence, be sure to install uv in order to to setup the development virtual environment.
+Instructions for installing uv can be found <a class="reference external" href="https://docs.astral.sh/uv/getting-started/installation/">here</a>.
+Note that uv supports <a class="reference external" href="https://docs.astral.sh/uv/concepts/projects/dependencies/#dependency-groups">optional dependency groups</a>
+which helps to manage dependencies for different parts of development such as <code class="docutils literal notranslate"><span class="pre">documentation</span></code>,
 <code class="docutils literal notranslate"><span class="pre">testing</span></code>, etc. The core dependencies are installed using the command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>poetry<span class="w"> </span>install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>sync
 </pre></div>
 </div>
-<p>Additional dependency groups can be installed using the <code class="docutils literal notranslate"><span class="pre">--with</span></code> flag. For example:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>poetry<span class="w"> </span>install<span class="w"> </span>--with<span class="w"> </span>docs,test
+<p>Additional dependency groups can be installed using the <code class="docutils literal notranslate"><span class="pre">--group</span></code> flag followed
+by the group name. For example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>sync<span class="w"> </span>--all-extras<span class="w"> </span>--group<span class="w"> </span>docs<span class="w"> </span>--group<span class="w"> </span><span class="nb">test</span>
 </pre></div>
 </div>
 <div class="important admonition">

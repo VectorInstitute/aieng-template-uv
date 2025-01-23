@@ -7,20 +7,26 @@
 If your project doesn't have a pyproject.toml file, simply copy the one from the
 template and update file according to your project.
 
-For managing dependencies, [Poetry](https://python-poetry.org/) is the recommended tool
-for our team. Hence, install Poetry to setup the development virtual environment. Poetry
-supports [optional dependency groups](https://python-poetry.org/docs/managing-dependencies/#optional-groups)
-which help manage dependencies for different parts of development such as `documentation`,
+For managing dependencies, this template makes use of [uv](https://docs.astral.sh/uv/),
+which according to some [benchmarks](https://github.com/astral-sh/uv/blob/main/BENCHMARKS.md)
+is faster than alternative like Poetry (which our original AI Engineering Template
+makes use of).
+
+Hence, be sure to install uv in order to to setup the development virtual environment.
+Instructions for installing uv can be found [here](https://docs.astral.sh/uv/getting-started/installation/).
+Note that uv supports [optional dependency groups](https://docs.astral.sh/uv/concepts/projects/dependencies/#dependency-groups)
+which helps to manage dependencies for different parts of development such as `documentation`,
 `testing`, etc. The core dependencies are installed using the command:
 
 ```bash
-python3 -m poetry install
+uv sync
 ```
 
-Additional dependency groups can be installed using the `--with` flag. For example:
+Additional dependency groups can be installed using the `--group` flag followed
+by the group name. For example:
 
 ```bash
-python3 -m poetry install --with docs,test
+uv sync --all-extras --group docs --group test
 ```
 
 ```{admonition} mypy configuration options
