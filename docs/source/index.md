@@ -20,7 +20,7 @@ The template includes:
 
 - [pyproject.toml](https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/)
 file to specify repository information and manage dependencies using
-[Poetry](https://python-poetry.org/).
+[uv](https://docs.astral.sh/uv/).
 
 - [README.md](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) which should have basic information on why the project is
 useful, installation instructions and other information on how users can get started.
