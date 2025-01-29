@@ -8,7 +8,7 @@ on:
       - .pre-commit-config.yaml
       - .github/workflows/code_checks.yml
       - '**.py'
-      - poetry.lock
+      - uv.lock
       - pyproject.toml
       - '**.ipynb'
   pull_request:

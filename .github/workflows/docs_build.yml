@@ -11,7 +11,7 @@ on:
       - '**.ipynb'
       - '**.js'
       - '**.html'
-      - poetry.lock
+      - uv.lock
       - pyproject.toml
       - '**.rst'
       - '**.md'
