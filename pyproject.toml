@@ -128,3 +128,6 @@ markers = [
     [tool.coverage.run]
     source=["aieng_template"]
     omit=["tests/*", "*__init__.py"]
+
+[tool.poetry.group.docs.dependencies]
+sphinx-autobuild = "^2024.10.3"
