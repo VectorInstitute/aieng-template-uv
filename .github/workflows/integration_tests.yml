@@ -9,6 +9,7 @@ on:
       - .github/workflows/code_checks.yml
       - .github/workflows/docs_build.yml
       - .github/workflows/docs_deploy.yml
+      - .github/workflows/unit_tests.yml
       - .github/workflows/integration_tests.yml
       - '**.py'
       - '**.ipynb'
@@ -24,6 +25,7 @@ on:
       - .github/workflows/code_checks.yml
       - .github/workflows/docs_build.yml
       - .github/workflows/docs_deploy.yml
+      - .github/workflows/unit_tests.yml
       - .github/workflows/integration_tests.yml
       - '**.py'
       - '**.ipynb'
