@@ -1,4 +1,7 @@
 name: integration tests
+permissions:
+  contents: read
+  pull-requests: write
 
 on:
   push:
