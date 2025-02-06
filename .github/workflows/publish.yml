@@ -4,8 +4,9 @@ permissions:
   pull-requests: write
 
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - "v*"
 
 jobs:
   deploy:
@@ -40,3 +41,10 @@ jobs:
         with:
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: ncipollo/release-action@v1.15.0
+        with:
+          artifacts: "dist/*"
+          generateReleaseNotes: true
