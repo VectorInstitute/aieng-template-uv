@@ -149,3 +149,11 @@ in order to publish PyPI packages when new software releases are created on Gith
 The test workflows also compute coverage and upload code coverage metrics to
 [codecov.io](https://app.codecov.io/gh/VectorInstitute/aieng-template). Create a
 `CODECOV_TOKEN` and add it to the repository's actions [secret variables](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions).
+
+```{admonition} codecov
+:class: warning
+
+The [codecov](https://app.codecov.io/github/VectorInstitute) tool is subscribed under the free tier
+which makes it usable only for public open-source repos. Hence, if you would like to develop in a
+private repo, it is recommended to remove the codecov actions from the github workflow files.
+```
