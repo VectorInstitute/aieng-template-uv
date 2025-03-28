@@ -9,11 +9,11 @@
 | Last Updated | [Last update date] |
 | Version | [Document version] |
 
-> **Note**: This template provides a structure for documenting the design of 
-software built by the AI Engineering team at the Vector Institute. Not all sections 
-may be relevant for your project - feel free to add, remove, or modify sections as needed. 
-Architecture diagrams can be created using tools like [draw.io](https://app.diagrams.net/), 
-[Mermaid](https://mermaid-js.github.io/mermaid/), or [Excalidraw](https://excalidraw.com/), 
+> **Note**: This template provides a structure for documenting the design of
+software built by the AI Engineering team at the Vector Institute. Not all sections
+may be relevant for your project - feel free to add, remove, or modify sections as needed.
+Architecture diagrams can be created using tools like [draw.io](https://app.diagrams.net/),
+[Mermaid](https://mermaid-js.github.io/mermaid/), or [Excalidraw](https://excalidraw.com/),
 then embedded or linked in this document.
 
 ## 1. Introduction
