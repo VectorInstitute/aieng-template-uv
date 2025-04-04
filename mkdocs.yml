@@ -63,8 +63,7 @@ theme:
     - toc.follow
   icon:
     repo: fontawesome/brands/github
-  logo_dark_mode: assets/logo-dark.svg
-  logo_light_mode: assets/logo.svg
+  logo: assets/vector-logo.svg
   logo_footer: assets/vector-logo.svg
   name: material
   palette:

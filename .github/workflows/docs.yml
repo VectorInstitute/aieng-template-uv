@@ -86,6 +86,9 @@ jobs:
           name: docs-site
           path: site
 
+      - name: Ensure .nojekyll exists
+        run: touch site/.nojekyll
+
       - name: Deploy to Github pages
         uses: JamesIves/github-pages-deploy-action@v4.7.3
         with:

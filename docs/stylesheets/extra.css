@@ -24,32 +24,13 @@
   --md-typeset-a-color: #eb088a;
 }
 
-/* for logo/imgs specification with dark/light modes to match overrides/partial/logo.html */
-#img_light_mode {
-  display: var(--md-footer-logo-light-mode);
-}
-
-#img_dark_mode {
-  display: var(--md-footer-logo-dark-mode);
-}
-
-#logo_light_mode {
-  display: var(--md-footer-logo-light-mode);
-}
-
-#logo_dark_mode {
-  display: var(--md-footer-logo-dark-mode);
-}
-
 [data-md-color-scheme="default"] {
-  --md-footer-logo-dark-mode: none;
-  --md-footer-logo-light-mode: block;
+  /* Default light mode styling */
 }
 
 [data-md-color-scheme="slate"] {
   --md-typeset-a-color: #eb088a;
-  --md-footer-logo-dark-mode: block;
-  --md-footer-logo-light-mode: none;
+  /* Dark mode styling */
 }
 
 /* Vector logo css styling to match overrides/partial/copyright.html */
