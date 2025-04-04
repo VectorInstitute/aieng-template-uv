@@ -6,7 +6,7 @@ name = "aieng-template-uv"
 version = "0.1.0"
 source = { editable = "." }
 
-[package.optional-dependencies]
+[package.dev-dependencies]
 dev = [
     { name = "codecov" },
     { name = "mypy" },
@@ -29,23 +29,27 @@ docs = [
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "codecov", marker = "extra == 'dev'", specifier = ">=2.1.13" },
-    { name = "ipykernel", marker = "extra == 'docs'", specifier = ">=6.29.5" },
-    { name = "ipython", marker = "extra == 'docs'", specifier = ">=8.31.0" },
-    { name = "mkdocs", marker = "extra == 'docs'", specifier = ">=1.6.0" },
-    { name = "mkdocs-material", marker = "extra == 'docs'", specifier = ">=9.5.15" },
-    { name = "mkdocstrings", marker = "extra == 'docs'", specifier = ">=0.24.1" },
-    { name = "mkdocstrings-python", marker = "extra == 'docs'", specifier = ">=1.10.0" },
-    { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.14.1" },
-    { name = "nbqa", marker = "extra == 'dev'", specifier = ">=1.9.1" },
-    { name = "pip-audit", marker = "extra == 'dev'", specifier = ">=2.7.3" },
-    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=4.1.0" },
-    { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.3.4" },
-    { name = "pytest-asyncio", marker = "extra == 'dev'", specifier = ">=0.25.2" },
-    { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=6.0.0" },
-    { name = "pytest-mock", marker = "extra == 'dev'", specifier = ">=3.14.0" },
-    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.9.2" },
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "codecov", specifier = ">=2.1.13" },
+    { name = "mypy", specifier = ">=1.14.1" },
+    { name = "nbqa", specifier = ">=1.9.1" },
+    { name = "pip-audit", specifier = ">=2.7.3" },
+    { name = "pre-commit", specifier = ">=4.1.0" },
+    { name = "pytest", specifier = ">=8.3.4" },
+    { name = "pytest-asyncio", specifier = ">=0.25.2" },
+    { name = "pytest-cov", specifier = ">=6.0.0" },
+    { name = "pytest-mock", specifier = ">=3.14.0" },
+    { name = "ruff", specifier = ">=0.9.2" },
+]
+docs = [
+    { name = "ipykernel", specifier = ">=6.29.5" },
+    { name = "ipython", specifier = ">=8.31.0" },
+    { name = "mkdocs", specifier = ">=1.6.0" },
+    { name = "mkdocs-material", specifier = ">=9.5.15" },
+    { name = "mkdocstrings", specifier = ">=0.24.1" },
+    { name = "mkdocstrings-python", specifier = ">=1.10.0" },
 ]
 
 [[package]]
