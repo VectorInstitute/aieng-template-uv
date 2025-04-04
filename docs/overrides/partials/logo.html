@@ -1,0 +1,9 @@
+<!-- Logo for the template -->
+{% if config.theme.logo_light_mode and config.theme.logo_dark_mode %}
+  <img src="{{ config.theme.logo_light_mode | url }}" class="light-mode-item">
+  <img src="{{ config.theme.logo_dark_mode | url }}" class="dark-mode-item">
+{% elif config.theme.logo %}
+  <img src="{{ config.theme.logo | url }}" alt="logo">
+{% else %}
+  <span class="md-header__title">{{ config.site_name }}</span>
+{% endif %}

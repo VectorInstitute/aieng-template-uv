@@ -1,0 +1,33 @@
+/* Custom CSS for AI Engineering Template */
+:root {
+  --md-primary-fg-color: #3f51b5;
+  --md-primary-fg-color--light: #7986cb;
+  --md-primary-fg-color--dark: #303f9f;
+  --md-accent-fg-color: #3f51b5;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.md-typeset h3 {
+  font-weight: 500;
+}
+
+.md-typeset code {
+  font-size: 0.9em;
+}
+
+.md-typeset pre {
+  margin: 1em 0;
+}
+
+.md-typeset .admonition {
+  font-size: 0.8rem;
+}
