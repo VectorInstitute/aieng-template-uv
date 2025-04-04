@@ -1,10 +1,5 @@
-<img
-  id="logo_light_mode"
-  src="{{ config.theme.logo_light_mode | url }}"
-  alt="logo"
-/>
-<img
-  id="logo_dark_mode"
-  src="{{ config.theme.logo_dark_mode | url }}"
-  alt="logo"
-/>
+{% if config.theme.logo %}
+<img src="{{ config.theme.logo | url }}" alt="logo">
+{% else %}
+<span class="md-header__title">{{ config.site_name }}</span>
+{% endif %}
