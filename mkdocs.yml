@@ -63,19 +63,22 @@ theme:
     - toc.follow
   icon:
     repo: fontawesome/brands/github
+  logo_dark_mode: assets/logo-dark.svg
+  logo_light_mode: assets/logo.svg
+  logo_footer: assets/vector-logo.svg
   name: material
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: vector
+      accent: vector-teal
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: black
+      accent: vector-teal
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
