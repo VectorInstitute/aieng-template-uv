@@ -1,16 +1,4 @@
----
-hide-toc: true
----
-
 # Vector AI Engineering template (uv edition) repository
-
-```{toctree}
-:hidden:
-
-user_guide
-api
-
-```
 
 This template repository can be used to bootstrap AI Engineering project repositories
 on Github! The template is meant for python codebases since Python is the most commonly
@@ -40,7 +28,7 @@ documentation building and releasing python packages to PyPI.
 By default, this is the [Apache-2.0 license](http://www.apache.org/licenses/). Please
 change according to your project!
 
-- [docs](https://pradyunsg.me/furo/) for adding project documentation. Typically
+- [docs](https://squidfunk.github.io/mkdocs-material/) for adding project documentation. Typically
 projects should have API reference documentation, user guides and tutorials.
 
 - [CONTRIBUTING.md](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors) with basic guidelines on how others can

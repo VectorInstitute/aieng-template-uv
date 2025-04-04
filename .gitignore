@@ -16,3 +16,6 @@ wheels/
 
 # Vscode
 .vscode
+
+# macos
+*.DS_Store
