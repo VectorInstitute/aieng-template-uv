@@ -35,6 +35,10 @@ docs = [
     "ipython>=8.31.0",
 ]
 
+#Default dependency groups to be installed
+[tool.uv]
+default-groups = ["dev", "docs"]
+
 [tool.mypy]
 ignore_missing_imports = true
 install_types = true
