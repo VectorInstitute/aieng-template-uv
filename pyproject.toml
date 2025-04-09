@@ -35,7 +35,7 @@ docs = [
     "ipython>=8.31.0",
 ]
 
-#Default dependency groups to be installed
+# Default dependency groups to be installed
 [tool.uv]
 default-groups = ["dev", "docs"]
 
