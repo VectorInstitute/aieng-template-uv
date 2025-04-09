@@ -34,6 +34,13 @@ uv sync --dev
 source .venv/bin/activate
 ```
 
+In order to exclude installation of packages from a specific group (e.g. docs),
+run:
+
+```bash
+uv sync --no-group docs
+```
+
 If you're coming from `poetry` then you'll notice that the virtual environment
 is actually stored in the project root folder and is by default named as `.venv`.
 The other important note is that while `poetry` uses a "flat" layout of the project,
