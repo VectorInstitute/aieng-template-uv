@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [ {name = "Vector AI Engineering", email = "ai_engineering@vectorinstitute.ai"}]
 license = "Apache-2.0"
 repository = "https://github.com/VectorInstitute/aieng-template-uv"
-requires-python = ">=3.12"
+requires-python = ">=3.10,<4.0"
 dependencies = []
 
 [build-system]
