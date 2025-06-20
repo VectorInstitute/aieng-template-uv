@@ -41,29 +41,31 @@ docs = [
 default-groups = ["dev", "docs"]
 
 [tool.mypy]
-ignore_missing_imports = true
+follow_imports = "normal"
+ignore_missing_imports = false
 install_types = true
 pretty = true
+non_interactive = true
+allow_untyped_defs = false
+no_implicit_optional = true
+check_untyped_defs = true
 namespace_packages = true
 explicit_package_bases = true
-non_interactive = true
 warn_unused_configs = true
-allow_any_generics = false
 allow_subclassing_any = false
 allow_untyped_calls = false
-allow_untyped_defs = false
 allow_incomplete_defs = false
-check_untyped_defs = true
 allow_untyped_decorators = false
 warn_redundant_casts = true
 warn_unused_ignores = true
-warn_return_any = true
 implicit_reexport = false
 strict_equality = true
 extra_checks = true
+mypy_path = "src"
 
 [tool.ruff]
 include = ["*.py", "pyproject.toml", "*.ipynb"]
+exclude = []
 line-length = 88
 
 [tool.ruff.format]
@@ -100,11 +102,18 @@ ignore = [
     "PLR2004", # Replace magic number with named constant
     "PLR0913", # Too many arguments
     "COM812", # Missing trailing comma
+    "ERA001", # Found commented-out code (too many false positives with math comments)
+    "A001", # Ignore variable `input` is shadowing a Python builtin (common for torch)
+    "A002", # Ignore variable `input` is shadowing a Python builtin in function (common for torch)
+    "D301", # r-strings for docstrings with backslashes
 ]
 
 # Ignore import violations in all `__init__.py` files.
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["E402", "F401", "F403", "F811"]
+# Ignoring undocumented public functions, public init, magic method, and magic numbers in tests folder
+"tests/*" = ["D103", "D105", "D107"]
+
 
 [tool.ruff.lint.pep8-naming]
 ignore-names = ["X*", "setUp"]
