@@ -71,3 +71,6 @@ For the full list of `uv` commands, you can visit the official [docs](https://do
 
 If you're curious about what "uv" stands for, it appears to have been more or
 less chosen [randomly](https://github.com/astral-sh/uv/issues/1349#issuecomment-1986451785).
+
+
+For more details, check out the [User Guide](https://github.com/VectorInstitute/aieng-template-uv/blob/main/docs/user_guide.md).
