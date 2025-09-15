@@ -437,6 +437,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-pages-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub Pages Setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -543,6 +558,21 @@
       documentation
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-pages-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub Pages Setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -665,6 +695,16 @@ changes you make to the docs and will update them as they occur.</p>
 <p>You can configure the documentation by updating the <code>mkdocs.yml</code> file at the root of
 your repository. The markdown files in the <code>docs</code> directory can be updated to reflect
 the project's documentation.</p>
+<h3 id="github-pages-setup">GitHub Pages Setup<a class="headerlink" href="#github-pages-setup" title="Permanent link">&para;</a></h3>
+<p>To serve your documentation on GitHub Pages:</p>
+<ol>
+<li>Go to your repository's <strong>Settings</strong> tab</li>
+<li>Navigate to <strong>Pages</strong> in the left sidebar</li>
+<li>Under <strong>Source</strong>, select <strong>Deploy from a branch</strong></li>
+<li>Choose the <strong>gh-pages</strong> branch and <strong>/ (root)</strong> folder</li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<p>The documentation will be automatically built and deployed to GitHub Pages whenever you push changes to the main branch (thanks to the <code>.github/workflows/docs.yml</code> workflow). Your site will be available at <code>https://[username].github.io/[repository-name]/</code>.</p>
 <h2 id="github-actions">github actions<a class="headerlink" href="#github-actions" title="Permanent link">&para;</a></h2>
 <p>The template consists of some github action continuous integration workflows that you
 can add to your repository.</p>
