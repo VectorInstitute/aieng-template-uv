@@ -120,6 +120,18 @@ You can configure the documentation by updating the `mkdocs.yml` file at the roo
 your repository. The markdown files in the `docs` directory can be updated to reflect
 the project's documentation.
 
+### GitHub Pages Setup
+
+To serve your documentation on GitHub Pages:
+
+1. Go to your repository's **Settings** tab
+2. Navigate to **Pages** in the left sidebar
+3. Under **Source**, select **Deploy from a branch**
+4. Choose the **gh-pages** branch and **/ (root)** folder
+5. Click **Save**
+
+The documentation will be automatically built and deployed to GitHub Pages whenever you push changes to the main branch (thanks to the `.github/workflows/docs.yml` workflow). Your site will be available at `https://[username].github.io/[repository-name]/`.
+
 
 ## github actions
 
