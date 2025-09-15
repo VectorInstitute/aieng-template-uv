@@ -2,6 +2,8 @@
 
 <!-- Provide a brief description of what this PR does -->
 
+Clickup Ticket(s): Link(s) if applicable.
+
 ## Type of Change
 
 - [ ] 🐛 Bug fix (non-breaking change that fixes an issue)
@@ -24,8 +26,8 @@
 
 <!-- Describe how you tested these changes -->
 - [ ] Tests pass locally (`uv run pytest tests/`)
-- [ ] Type checking passes (`uv run mypy kadal/`)
-- [ ] Linting passes (`uv run ruff check kadal/`)
+- [ ] Type checking passes (`uv run mypy <src_dir>`)
+- [ ] Linting passes (`uv run ruff check src_dir/`)
 - [ ] Manual testing performed (describe below)
 
 **Manual testing details:**
