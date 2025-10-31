@@ -19,3 +19,4 @@ wheels/
 
 # macos
 *.DS_Store
+site/
