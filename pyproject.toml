@@ -70,7 +70,7 @@ mypy_path = "src"
 [tool.ruff]
 include = ["*.py", "pyproject.toml", "*.ipynb"]
 exclude = []
-line-length = 88
+line-length = 120
 
 [tool.ruff.format]
 quote-style = "double"
