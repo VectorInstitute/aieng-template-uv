@@ -8,7 +8,7 @@ license = "Apache-2.0"
 repository = "https://github.com/VectorInstitute/aieng-template-uv"
 requires-python = ">=3.12"
 dependencies = [
-    "filelock==3.20.3",
+    "filelock==3.20.4",
     "urllib3==2.6.3",
 ]
 
