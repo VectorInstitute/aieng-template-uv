@@ -37,7 +37,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "filelock", specifier = "==3.20.4" },
+    { name = "filelock", specifier = "==3.24.2" },
     { name = "urllib3", specifier = "==2.6.3" },
 ]
 
@@ -469,11 +469,11 @@ wheels = [
 
 [[package]]
 name = "filelock"
-version = "3.20.4"
+version = "3.24.2"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/db/81/cfe075b6ce057ce595c61d52a0bd6452f425f923b6c02ecee6c0c8d6e5a7/filelock-3.20.4.tar.gz", hash = "sha256:92b98bb6be1a4e6c1b00f8aedae011c6e2d367c195000a049daa34f554af3d94", size = 31347, upload-time = "2026-02-12T15:31:04.971Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/02/a8/dae62680be63cbb3ff87cfa2f51cf766269514ea5488479d42fec5aa6f3a/filelock-3.24.2.tar.gz", hash = "sha256:c22803117490f156e59fafce621f0550a7a853e2bbf4f87f112b11d469b6c81b", size = 37601, upload-time = "2026-02-16T02:50:45.614Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5b/30/076a6014a380889df7d2cd7d486dd457a3e2ad341223f540304727bb7437/filelock-3.20.4-py3-none-any.whl", hash = "sha256:3334d8af34a55fbebfceeee137220e844799d75650d2d6140e4a9ed536e5f7f5", size = 21379, upload-time = "2026-02-12T15:31:03.793Z" },
+    { url = "https://files.pythonhosted.org/packages/e7/04/a94ebfb4eaaa08db56725a40de2887e95de4e8641b9e902c311bfa00aa39/filelock-3.24.2-py3-none-any.whl", hash = "sha256:667d7dc0b7d1e1064dd5f8f8e80bdac157a6482e8d2e02cd16fd3b6b33bd6556", size = 24152, upload-time = "2026-02-16T02:50:44Z" },
 ]
 
 [[package]]
