@@ -9,6 +9,7 @@ repository = "https://github.com/VectorInstitute/aieng-template-uv"
 requires-python = ">=3.12"
 dependencies = [
     "filelock==3.25.2",
+    "requests>=2.33.0", # Pinning version to address vulnerability CVE-2026-25645
     "urllib3==2.6.3",
 ]
 
