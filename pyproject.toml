@@ -36,6 +36,7 @@ docs = [
     "jinja2>=3.1.6", # Pinning version to address vulnerability GHSA-cpwx-vrp4-4pq7
     "mkdocs>=1.6.0",
     "mkdocs-material>=9.5.15",
+    "pymdown-extensions>=10.21.2", # Pinning version to fix pygments 2.20.0 compatibility
     "mkdocstrings>=0.24.1",
     "mkdocstrings-python>=1.10.0",
     "ipykernel>=6.29.5",
