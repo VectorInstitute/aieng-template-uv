@@ -35,6 +35,7 @@ docs = [
     { name = "mkdocs-material" },
     { name = "mkdocstrings" },
     { name = "mkdocstrings-python" },
+    { name = "pygments" },
     { name = "pymdown-extensions" },
 ]
 
@@ -68,6 +69,7 @@ docs = [
     { name = "mkdocs-material", specifier = ">=9.5.15" },
     { name = "mkdocstrings", specifier = ">=0.24.1" },
     { name = "mkdocstrings-python", specifier = ">=1.10.0" },
+    { name = "pygments", specifier = ">=2.20.0" },
     { name = "pymdown-extensions", specifier = ">=10.21.2" },
 ]
 
