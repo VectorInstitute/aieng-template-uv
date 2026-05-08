@@ -10,7 +10,7 @@ requires-python = ">=3.12"
 dependencies = [
     "filelock==3.29.0",
     "requests>=2.33.0", # Pinning version to address vulnerability CVE-2026-25645
-    "urllib3==2.6.3",
+    "urllib3==2.7.0",
     "pygments>=2.20.0", # Pinning version to address vulnerability CVE-2026-4539
 ]
 
