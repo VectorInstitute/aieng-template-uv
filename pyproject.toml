@@ -30,6 +30,7 @@ dev = [
     "pytest-asyncio>=0.25.2",
     "pytest-cov>=6.0.0",
     "pytest-mock>=3.14.0",
+    "msgpack>=1.2.1", # Pinning version to address vulnerability GHSA-6v7p-g79w-8964
     "ruff>=0.13.3",
 ]
 docs = [
